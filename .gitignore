@@ -1,0 +1,15 @@
+# LibreOffice / OpenDocument lock files
+.~lock.*#
+
+# QGIS temporary / editor artifacts
+*.qgs~
+*.qgc~
+*_private.db
+
+# OS cruft
+.DS_Store
+Thumbs.db
+
+# Backup folders
+*~
+pre-fuzz-backup/

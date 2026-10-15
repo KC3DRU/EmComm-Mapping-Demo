@@ -10,11 +10,12 @@
 </p>
 
 <p align="center">
-  <a href="https://www.qgis.org"><img src="https://img.shields.io/badge/QGIS-3.44%20Solothurn-62a05f?logo=qgis&logoColor=white" alt="QGIS 3.44"></a>
+  <a href="https://www.qgis.org"><img src="https://img.shields.io/badge/QGIS-3.44%20Solothurn-62a05f?logo=qgis&amp;logoColor=white" alt="QGIS 3.44"></a>
   <a href="https://n3twt.org"><img src="https://img.shields.io/badge/Club-N3TWT.org-1f6feb" alt="N3TWT"></a>
   <a href="https://github.com/KC3DRU"><img src="https://img.shields.io/badge/Maintainer-KC3DRU-333333" alt="Maintainer KC3DRU"></a>
   <img src="https://img.shields.io/badge/Data-CSV%20%C2%B7%20WKT%20%C2%B7%20GeoJSON%20%C2%B7%20Shapefile-6f42c1" alt="Data formats">
   <img src="https://img.shields.io/badge/Cost-100%25%20free%20%2F%20open%20source-2ea44f" alt="Free and open source">
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-CC%20BY--SA%204.0-8f1f40" alt="License: CC BY-SA 4.0"></a>
 </p>
 
 <p align="center">
@@ -34,10 +35,11 @@
 - [Styling cheat sheet](#styling-cheat-sheet)
 - [QGIS → CalTopo handoff](#qgis--caltopo-handoff)
 - [The presentation](#the-presentation)
-- [Known issues & housekeeping](#known-issues--housekeeping)
+- [Notes & caveats](#notes--caveats)
 - [Data sources worth knowing](#data-sources-worth-knowing)
 - [Field tips](#field-tips)
 - [Contributing & contact](#contributing--contact)
+- [License & attribution](#license--attribution)
 
 ---
 
@@ -49,7 +51,8 @@ During the **July 2026 simplex test** handled out of the Cumberland County EOC, 
 
 <div align="center">
   <img src="assets/net-connectivity-july-2026.png" alt="QGIS map of stations heard during the July 2026 SMRA simplex test, drawn as lines radiating from the EOC" width="560">
-  <br><sub>Stations heard on the July 2026 net — one line per contact, radiating from the EOC.</sub>
+  <br><sub>Stations heard on the July 2026 net — one line per contact, radiating from the EOC.<br>
+  Coordinates in this repo are fuzzed; see <a href="#notes--caveats">Notes &amp; caveats</a>.</sub>
 </div>
 
 **What QGIS is good for in EmComm:**
@@ -86,6 +89,8 @@ During the **July 2026 simplex test** handled out of the Cumberland County EOC, 
 
 ```text
 EmComm-Mapping-Demo/
+├── .gitignore                             # Lock files, backups (keeps scratch data out)
+├── LICENSE                                # CC BY-SA 4.0
 ├── EmComm_Planning_Map.qgz              # The QGIS project (layers, styles, CRS)
 ├── QGIS_EmComm_Mapping_Intro_v2.odp     # Club presentation (LibreOffice Impress)
 ├── QGIS_EmComm_Mapping_Intro_v2.pptx    # Same deck for PowerPoint
@@ -208,13 +213,12 @@ Slides 10–13 also show how much a basemap changes the picture: aeronautical, n
 
 ---
 
-## Known issues & housekeeping
+## Notes & caveats
 
-- **`Merged Drill Layers` may load as invalid.** The project stores it as `./Merged_Drill_Layers.geojson` while the file lives in `Layers/`. Fix in QGIS by right-clicking the layer → *Fix Layer* (or remove it and re-add `Layers/Merged_Drill_Layers.geojson`); the merge is reproducible with *Processing → Merge vector layers*.
-- **Basemaps need internet.** OSM, USGS Topo and ESRI World Hillshade are online tile services — plan for this before an activation.
-- **Sample data contains real callsigns tied to locations.** It is published here as a learning artifact; treat operator positions with the same care you would treat any net log, and strip or generalize them before republishing anywhere public.
-- **Leftovers in the tree:** `Layers/oldCrap/` holds an empty scratch database and can be deleted; `Exports/` is a demo of export options, not required for the project to run.
-- **No license file yet.** Until one is added, treat the deck and data as club-internal material. Ask KC3DRU before reposting outside SMRA.
+- **Coordinates are fuzzed.** Every lat/lon in this repo has been deliberately perturbed to protect operators' actual locations. The shapes, distances and lessons are real; the positions are **illustrative only** — do not use them for navigation, coverage prediction, or a real response.
+- **Keep it that way when you contribute.** If you add your own net data, fuzz it first (round to ~0.01° is usually enough for a club map) or use exercise locations instead of home QTHs.
+- **Basemaps need internet.** OSM, USGS Topo and ESRI World Hillshade are online tile services — plan for this before an activation, and credit the provider on anything you publish.
+- **Third-party data.** Basemap tiles and any county GIS downloads stay under their own terms; the club logo and the call sign N3TWT are not covered by the repo license (see [License](#license--attribution)).
 
 ---
 
@@ -261,5 +265,23 @@ If you built a map for a net, exercise, or Field Day — put it in a branch and 
 | 🛡️ ARES / EmComm | [n3twt.org → ARES](https://n3twt.org) |
 | 📍 Meetings | Cumberland County EOC, 1 Public Safety Drive, Carlisle, PA |
 | ✉️ Project contact | Rick Stoner, KC3DRU — [github.com/KC3DRU](https://github.com/KC3DRU) |
+
+---
+
+## License & attribution
+
+<p align="left">
+  <a href="LICENSE"><img src="https://img.shields.io/badge/CC%20BY--SA-4.0-8f1f40?logo=creative%20commons&amp;logoColor=white" alt="CC BY-SA 4.0"></a>
+</p>
+
+The presentation, QGIS project, and map data are licensed under **[CC BY-SA 4.0](LICENSE)** —
+share and adapt freely, even commercially, if you credit the source and pass along the same license.
+
+> EmComm Mapping Demo © 2026 Rick Stoner (KC3DRU) and the South Mountain Radio Amateurs (N3TWT).
+> https://github.com/KC3DRU/EmComm-Mapping-Demo
+
+**Not covered:** the club name, logo and call sign N3TWT; third-party basemap content
+([OpenStreetMap](https://www.openstreetmap.org/copyright), [USGS](https://www.usgs.gov/information-policies-and-instructions/citations-acknowledgments),
+[ESRI](https://www.esri.com/en-us/search/attribution)); and QGIS itself.
 
 *Happy hunting — and may your next net map be a full one.* **73, SMRA**
