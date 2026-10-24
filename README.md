@@ -32,6 +32,7 @@
 - [What's in the repo](#whats-in-the-repo)
 - [The sample project](#the-sample-project)
 - [Make your own net map](#make-your-own-net-map)
+- [Step-by-step walkthroughs](#step-by-step-walkthroughs)
 - [Styling cheat sheet](#styling-cheat-sheet)
 - [QGIS → CalTopo handoff](#qgis--caltopo-handoff)
 - [The presentation](#the-presentation)
@@ -93,7 +94,10 @@ EmComm-Mapping-Demo/
 ├── LICENSE                                # CC BY-SA 4.0
 ├── EmComm_Planning_Map.qgz              # The QGIS project (layers, styles, CRS)
 ├── QGIS_EmComm_Mapping_Intro_v2.odp     # Club presentation (LibreOffice Impress)
-├── QGIS_EmComm_Mapping_Intro_v2.pptx    # Same deck for PowerPoint
+├── QGIS_EmComm_Mapping_Intro_v2.pdf     # Same deck as PDF
+├── Other_Instructions/                  # Written walkthroughs (PDF, with screenshots)
+│   ├── Point-to-Point Contact Map.pdf   # Contact lines + station dots from a spreadsheet
+│   └── Creating a Drive Route for CERT.pdf  # Valhalla routing + task-instruction layer
 ├── Layers/                              # Working data used by the project
 │   ├── 20260716_EmComm_Net_EOC_South_Mountain.csv   # Net contacts as WKT linestrings
 │   ├── OPERATORS.WKT                    # Station points (callsign + WKT POINT)
@@ -166,6 +170,67 @@ Notes that save grief later:
 
 ---
 
+## Step-by-step walkthroughs
+
+Two illustrated walkthroughs live in `Other_Instructions/` — screenshot-heavy PDFs covering the two
+layer types an EmComm map uses most: **contact lines** and **drive routes**.
+
+### 1. Point-to-Point Contact Map
+
+> 📄 [`Other_Instructions/Point-to-Point Contact Map.pdf`](<Other_Instructions/Point-to-Point Contact Map.pdf>) — 8 pages
+
+This is how the `EC_DRILL` and `OPERATORS` layers in this project were built.
+
+1. **Build the WKT in the spreadsheet.** Two `=CONCATENATE()` sections emit a `LINESTRING(lon lat, lon lat)`
+   per contact — from your position to each station you could hear — alongside `CALLSIGN` (label) and
+   `SIGNAL` (category). Operator dots use `POINT(lon lat)` the same way.
+2. **Save those three columns as CSV.** Commas between fields, double quotes around the WKT — pasting into
+   a text file works, you just have to add both by hand.
+3. **Fade the basemap.** OpenStreetMap at **50% transparency** gives a visual reference without drowning the radio layers.
+4. **`Layer → Add Layer → Add Delimited Text Layer`** → your file, file format **CSV**, *Geometry definition* =
+   **Well-known text (WKT)**, geometry field = `WKT`, CRS `EPSG:4326`.
+5. **Symbology → Categorized** → value = `SIGNAL` → *Classify* → double-click each symbol. Good = solid green,
+   Poor = red, line width about **1 mm** so it reads on paper.
+6. **Labels → Single Labels** → value = `CALLSIGN`, text color matched to the line, font size ~11.
+
+You get red/green contact lines labelled with each callsign, and the same color coding shows up in the Layers panel.
+
+### 2. Creating a Drive Route for CERT
+
+> 📄 [`Other_Instructions/Creating a Drive Route for CERT.pdf`](<Other_Instructions/Creating a Drive Route for CERT.pdf>) — 6 pages
+
+Routing a windshield-survey drive out of the EOC with the **Valhalla** plugin
+(*Plugins → Manage and Install Plugins… → search “Valhalla”*), then annotating it with task instructions.
+
+**Drive the route**
+
+1. Open the project, select the `CERT Routes` layer, click the **Valhalla** icon to open the side panel.
+2. Enable the **Line** tool (top left) → green **+** to start adding waypoints; the yellow three-dot star marks them.
+3. Set the profile to **Car** so you get driving directions.
+4. Start at the EOC and click along **on roads**. **No more than 20 waypoints per session**, and don't space
+   them too far apart — Valhalla will happily route you down roads that were never in your plan.
+5. *Execute* → check the segment → red **X** to clear those waypoints → click where you left off and repeat.
+6. Discard the waypoint layer when done; toggle the Valhalla segments on/off to confirm the order of travel.
+7. Right-click segment 1 → **Make Permanent** → save as `CERT_Route_04.shp`. On segment 2, *Make Permanent* →
+   pick the **same** file name → choose **Append**. Repeat for every segment.
+8. `Layer → Add Layer → Vector` → reload `CERT_Route_04.shp` and give it a unique color
+   (*Properties → Symbology*).
+
+**Add the instructions layer**
+
+1. `Layer → Create Layer → New Shapefile…` → e.g. `CERT_Route_Instructions_04.shp`, geometry type **Point**.
+2. Add a field named `Task`, type **String**, length **120** → *Add to Fields List*.
+3. Symbology: pick a color close to the route line. **Labels → Single Label → `Task`**, then enable **Buffer**
+   (same HTML hex code as the symbol) and **Shadow** so the text reads over any basemap.
+4. Toggle editing on (pencil) → the *three blue dots with an asterisk* tool → crosshair-click each spot that
+   needs instructions.
+5. `Layer → Open Attribute Table` to edit the wording after the fact.
+
+**Share it:** right-click a layer → *Export → Save Features As…* → **KML** for CalTopo or a handheld —
+see [QGIS → CalTopo handoff](#qgis--caltopo-handoff).
+
+---
+
 ## Styling cheat sheet
 
 The convention used in the deck (Layer Properties → Symbology → *Categorized* or *Rule-based*):
@@ -201,7 +266,7 @@ Do the careful work in QGIS, then share live with the field team:
 
 ## The presentation
 
-`QGIS_EmComm_Mapping_Intro_v2.odp` (LibreOffice Impress) and the `.pptx` copy — 27 slides, delivered to the club October 2026 by Rick Stoner, KC3DRU.
+`QGIS_EmComm_Mapping_Intro_v2.odp` (LibreOffice Impress) and the `.pdf` copy — 27 slides, delivered to the club October 2026 by Rick Stoner, KC3DRU.
 
 1. **Why maps matter in EmComm** — situational awareness, after-action, planning
 2. **Why QGIS (and when not)** — open-source power vs. specialized radio tools
@@ -231,6 +296,7 @@ Slides 10–13 also show how much a basemap changes the picture: aeronautical, n
 | [Cumberland County GIS](https://www.cumberlandcountypa.gov/3517/Map-Services) | Parcels, roads, buildings, emergency facilities |
 | [York County GIS](https://york-county-pa-gis-portal-yorkcountypa.hub.arcgis.com/) | Same, one county over |
 | [QuickMapServices](https://plugins.qgis.org/plugins/QuickMapServices/) | QGIS plugin — one click to dozens of basemaps |
+| [Valhalla](https://plugins.qgis.org/plugins/valhalla/) | QGIS plugin — driving/cycling routing, used for the CERT drive route |
 | GPX from handhelds / APRS exports | Track logs and waypoints straight into QGIS |
 | Repeater directories / FCC data | Public databases → convert to a point layer |
 | Your own digitizing | Click to add stations, draw contact lines |
@@ -284,4 +350,4 @@ share and adapt freely, even commercially, if you credit the source and pass alo
 ([OpenStreetMap](https://www.openstreetmap.org/copyright), [USGS](https://www.usgs.gov/information-policies-and-instructions/citations-acknowledgments),
 [ESRI](https://www.esri.com/en-us/search/attribution)); and QGIS itself.
 
-*Happy hunting — and may your next net map be a full one.* **73, SMRA**
+*Happy hunting — and may your next net map be a full one.* **73 — Rick, KC3DRU**
