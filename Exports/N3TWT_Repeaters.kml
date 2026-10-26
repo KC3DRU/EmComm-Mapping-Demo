@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id="root_doc">
+<Folder><name>n3twt_repeaters</name>
+  <Placemark>
+	<name>146.460</name>
+      <Point><coordinates>-77.5326274514409,40.2215123830932</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>145.430</name>
+      <Point><coordinates>-77.2239155586737,40.0781701848496</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>443.000</name>
+      <Point><coordinates>-77.0693927220163,40.3024303177142</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>146.685 (DMR)</name>
+      <Point><coordinates>-77.2773152547178,40.2764307825061</coordinates></Point>
+  </Placemark>
+</Folder>
+</Document></kml>

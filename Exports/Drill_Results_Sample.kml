@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id="root_doc">
+<Schema name="20260716_emcomm_net_eoc_south_mountain" id="20260716_emcomm_net_eoc_south_mountain">
+	<SimpleField name="SIGNAL" type="string"></SimpleField>
+</Schema>
+<Folder><name>20260716_emcomm_net_eoc_south_mountain</name>
+  <Placemark>
+	<name>EOC_NCO</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#20260716_emcomm_net_eoc_south_mountain">
+		<SimpleData name="SIGNAL">GOOD</SimpleData>
+	</SchemaData></ExtendedData>
+      <LineString><coordinates>-77.16001461,40.21293984 -77.16001461,40.21293984</coordinates></LineString>
+  </Placemark>
+  <Placemark>
+	<name>W3AND</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#20260716_emcomm_net_eoc_south_mountain">
+		<SimpleData name="SIGNAL">GOOD</SimpleData>
+	</SchemaData></ExtendedData>
+      <LineString><coordinates>-77.16001461,40.21293984 -76.940069,40.218118</coordinates></LineString>
+  </Placemark>
+  <Placemark>
+	<name>WB3FNJ</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#20260716_emcomm_net_eoc_south_mountain">
+		<SimpleData name="SIGNAL">GOOD</SimpleData>
+	</SchemaData></ExtendedData>
+      <LineString><coordinates>-77.16001461,40.21293984 -77.166066,40.265184</coordinates></LineString>
+  </Placemark>
+  <Placemark>
+	<name>KC3WUJ</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#20260716_emcomm_net_eoc_south_mountain">
+		<SimpleData name="SIGNAL">GOOD</SimpleData>
+	</SchemaData></ExtendedData>
+      <LineString><coordinates>-77.16001461,40.21293984 -77.12558,40.187746</coordinates></LineString>
+  </Placemark>
+  <Placemark>
+	<name>K3EJP</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#20260716_emcomm_net_eoc_south_mountain">
+		<SimpleData name="SIGNAL">GOOD</SimpleData>
+	</SchemaData></ExtendedData>
+      <LineString><coordinates>-77.16001461,40.21293984 -77.049066,40.106369</coordinates></LineString>
+  </Placemark>
+  <Placemark>
+	<name>KG3SKY</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#20260716_emcomm_net_eoc_south_mountain">
+		<SimpleData name="SIGNAL">GOOD</SimpleData>
+	</SchemaData></ExtendedData>
+      <LineString><coordinates>-77.16001461,40.21293984 -77.348716,40.224463</coordinates></LineString>
+  </Placemark>
+  <Placemark>
+	<name>N3UTN</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#20260716_emcomm_net_eoc_south_mountain">
+		<SimpleData name="SIGNAL">GOOD</SimpleData>
+	</SchemaData></ExtendedData>
+      <LineString><coordinates>-77.16001461,40.21293984 -77.195342,40.113304</coordinates></LineString>
+  </Placemark>
+  <Placemark>
+	<name>N3OFI</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#20260716_emcomm_net_eoc_south_mountain">
+		<SimpleData name="SIGNAL">GOOD</SimpleData>
+	</SchemaData></ExtendedData>
+      <LineString><coordinates>-77.16001461,40.21293984 -77.059823,40.151977</coordinates></LineString>
+  </Placemark>
+  <Placemark>
+	<name>KC3RTP</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#20260716_emcomm_net_eoc_south_mountain">
+		<SimpleData name="SIGNAL">GOOD</SimpleData>
+	</SchemaData></ExtendedData>
+      <LineString><coordinates>-77.16001461,40.21293984 -77.036473,39.9842</coordinates></LineString>
+  </Placemark>
+  <Placemark>
+	<name>KC3DRU</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#20260716_emcomm_net_eoc_south_mountain">
+		<SimpleData name="SIGNAL">GOOD</SimpleData>
+	</SchemaData></ExtendedData>
+      <LineString><coordinates>-77.16001461,40.21293984 -77.063952,40.090575</coordinates></LineString>
+  </Placemark>
+  <Placemark>
+	<name>KC3ZPB</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#20260716_emcomm_net_eoc_south_mountain">
+		<SimpleData name="SIGNAL">GOOD</SimpleData>
+	</SchemaData></ExtendedData>
+      <LineString><coordinates>-77.16001461,40.21293984 -77.131887,40.258217</coordinates></LineString>
+  </Placemark>
+  <Placemark>
+	<name>KC3YWX</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#20260716_emcomm_net_eoc_south_mountain">
+		<SimpleData name="SIGNAL">GOOD</SimpleData>
+	</SchemaData></ExtendedData>
+      <LineString><coordinates>-77.16001461,40.21293984 -77.19613,40.239808</coordinates></LineString>
+  </Placemark>
+  <Placemark>
+	<name>AB3X</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#20260716_emcomm_net_eoc_south_mountain">
+		<SimpleData name="SIGNAL">GOOD</SimpleData>
+	</SchemaData></ExtendedData>
+      <LineString><coordinates>-77.16001461,40.21293984 -77.274476,40.168763</coordinates></LineString>
+  </Placemark>
+  <Placemark>
+	<name>KC3UBZ</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#20260716_emcomm_net_eoc_south_mountain">
+		<SimpleData name="SIGNAL">GOOD</SimpleData>
+	</SchemaData></ExtendedData>
+      <LineString><coordinates>-77.16001461,40.21293984 -77.036473,39.9842</coordinates></LineString>
+  </Placemark>
+  <Placemark>
+	<name>KD3ADX</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#20260716_emcomm_net_eoc_south_mountain">
+		<SimpleData name="SIGNAL">GOOD</SimpleData>
+	</SchemaData></ExtendedData>
+      <LineString><coordinates>-77.16001461,40.21293984 -76.987468,40.215367</coordinates></LineString>
+  </Placemark>
+  <Placemark>
+	<name>KD3CSX</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#20260716_emcomm_net_eoc_south_mountain">
+		<SimpleData name="SIGNAL">GOOD</SimpleData>
+	</SchemaData></ExtendedData>
+      <LineString><coordinates>-77.16001461,40.21293984 -76.932596,40.234547</coordinates></LineString>
+  </Placemark>
+  <Placemark>
+	<name>N3RBG</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#20260716_emcomm_net_eoc_south_mountain">
+		<SimpleData name="SIGNAL">GOOD</SimpleData>
+	</SchemaData></ExtendedData>
+      <LineString><coordinates>-77.16001461,40.21293984 -75.303015,40.11896</coordinates></LineString>
+  </Placemark>
+  <Placemark>
+	<name>KD3DEB</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#20260716_emcomm_net_eoc_south_mountain">
+		<SimpleData name="SIGNAL">GOOD</SimpleData>
+	</SchemaData></ExtendedData>
+      <LineString><coordinates>-77.16001461,40.21293984 -76.98234,40.185352</coordinates></LineString>
+  </Placemark>
+  <Placemark>
+	<name>KD3CAF</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#20260716_emcomm_net_eoc_south_mountain">
+		<SimpleData name="SIGNAL">GOOD</SimpleData>
+	</SchemaData></ExtendedData>
+      <LineString><coordinates>-77.16001461,40.21293984 -76.957898,40.268449</coordinates></LineString>
+  </Placemark>
+  <Placemark>
+	<name>W3JKO</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#20260716_emcomm_net_eoc_south_mountain">
+		<SimpleData name="SIGNAL">GOOD</SimpleData>
+	</SchemaData></ExtendedData>
+      <LineString><coordinates>-77.16001461,40.21293984 -77.114297,40.153748</coordinates></LineString>
+  </Placemark>
+  <Placemark>
+	<name>KD3DGQ</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#20260716_emcomm_net_eoc_south_mountain">
+		<SimpleData name="SIGNAL">GOOD</SimpleData>
+	</SchemaData></ExtendedData>
+      <LineString><coordinates>-77.16001461,40.21293984 -77.025913,40.203776</coordinates></LineString>
+  </Placemark>
+</Folder>
+</Document></kml>
