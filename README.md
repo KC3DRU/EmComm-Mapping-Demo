@@ -46,6 +46,7 @@ read the deck as [PDF](QGIS_EmComm_Mapping_Intro_v2.pdf), no LibreOffice require
 - [Data sources worth knowing](#data-sources-worth-knowing)
 - [Contributing & contact](#contributing--contact)
 - [License & attribution](#license--attribution)
+- [Colophon — who wrote what](#colophon--who-wrote-what)
 
 ---
 
@@ -256,20 +257,25 @@ pan, zoom and switch basemaps.
 <td width="6"></td>
 <td valign="top" width="47%">
 
-**▶ [CERT_203 Routes](https://caltopo.com/m/F5DG58K)** — `caltopo.com/m/F5DG58K`
+**▶ [CERT Demo Windshield Survey Routes](https://caltopo.com/m/56FEEBM)** — `caltopo.com/m/56FEEBM`
 
-<a href="https://caltopo.com/m/F5DG58K" title="Open in CalTopo"><img src="assets/caltopo-cert203-routes.jpg" alt="CalTopo preview: township windshield survey routes in several colors with EMA sites, hospital, water tower and a repeater coverage wedge" width="100%"></a>
+<a href="https://caltopo.com/m/56FEEBM" title="Open in CalTopo"><img src="assets/caltopo-cert-demo-routes.jpg" alt="CalTopo demo map preview: township windshield survey routes in several colors with EMA sites, hospital, water tower and a repeater coverage wedge" width="100%"></a>
 
-**What it becomes.** The Township **CERT team's EOC map**, shown during the October session — primary
+**What it becomes.** The Township **CERT team's EOC map**, as shown during the October session — primary
 windshield survey routes, EMA sites and resources, repeater coverage. QGIS for the careful layer work, one
-live shared picture for the net and the EOC. This is where [Walkthrough 2](#walkthrough-2--cert-drive-route) ends up.
+shared picture for the net and the EOC. This is where [Walkthrough 2](#walkthrough-2--cert-drive-route) ends up.
+
+**This is the demo copy, not the working map.** It exists so the example can be published without anyone
+reading the team's operational picture off a README link — in a real activation the net and EOC work on a
+separate map that stays private. Which is the rule anyway: **never point a response at a map you found in a
+repo.**
 
 </td>
 </tr>
 </table>
 
-> Both are *live* CalTopo maps — they will change, and access may be limited to teammates. The thumbnails above
-> are snapshots of the map previews (October 2026), basemap content © its providers. The maps are not part of
+> The left-hand map is live and will change; the CERT map is a frozen demo copy. Thumbnails are snapshots of
+> those map previews (October 2026), basemap content © its providers. The maps are not part of
 > this repo's files or its license; the KML/GeoJSON export is a one-way handoff. The three KML files behind the
 > left-hand map are in `Exports/`; re-export any layer with *Export → Save Features As… → Keyhole Markup
 > Language [KML]*. One thing to expect: **symbology does not survive the trip.** The exported
@@ -364,5 +370,25 @@ share and adapt freely, even commercially, if you credit the source and pass alo
 **Not covered:** the club name, logo and call sign N3TWT; third-party basemap content
 ([OpenStreetMap](https://www.openstreetmap.org/copyright), [USGS](https://www.usgs.gov/information-policies-and-instructions/citations-acknowledgments),
 [ESRI](https://www.esri.com/en-us/search/attribution)); and QGIS itself.
+
+## Colophon — who wrote what
+
+The maps, the data, the deck and the walkthroughs are **Rick Stoner, KC3DRU**. The prose of this README was
+drafted by an AI coding agent working under him — he set the structure and editorial calls, and reviewed the
+result. Disclosing it because a reader should know who to trust for the radio advice.
+
+| | |
+| :-- | :-- |
+| **Agent** | [Pi — the Pi Coding Agent](https://github.com/earendil-works/pi) v1.4.0 (MIT), with the [`pi-web-access`](https://github.com/nicobailon/pi-web-access) and [`pi-llama-cpp`](https://github.com/gsanhueza/pi-llama-cpp) extensions |
+| **Model** | **Qwen3.8-Flash-Next**, `UD-Q4_K_XL` GGUF quantization |
+| **Serving** | [llama.cpp](https://github.com/ggml-org/llama.cpp) on a home machine (`Johnny5.local:18080`) — inference is local, no cloud model API. The only outbound traffic was the HTTPS fetch of the two CalTopo map previews |
+| **Agent did** | README structure and wording, the two walkthrough summaries, the repo inventory, link and anchor checks, and the CalTopo thumbnails (preview images fetched and downscaled to 600 px JPEGs) |
+| **Agent did not** | originate any of the EmComm, radio, GIS or CERT content — that is the presentation and Rick's own written instructions, and errors in it are his to fix |
+
+Agent-written text here is released under the same [CC BY-SA 4.0](LICENSE) license as everything else in the
+repo. Technical claims were checked against the files where that was possible — the “symbology does not survive
+the KML export” note, for instance, came from opening the exported KML and finding 21 identical red lines.
+
+---
 
 *Happy hunting — and may your next net map be a full one.* **73, Rick KC3DRU**
